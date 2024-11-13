@@ -7,7 +7,7 @@
     list-style: none;
     overflow: hidden;
 }
-
+/*comentario*/
 body {
     background-color: #000;
     color: #fff;
@@ -16,14 +16,14 @@ body {
 
 header {
     position: fixed;
-    width: 80vw;
+    width: 90vw;
     left: 50%;
     transform: translateX(-50%);
     display: grid;
     align-items: center;
     grid-template-columns: 1fr 600px;
-    gap: 10%;
-    z-index: 2;
+    gap: 20%;
+    z-index: 1;
 
     & img {
         width: 250px;
@@ -31,19 +31,21 @@ header {
 
     & nav {
         & ul {
+            font-size: 25px;
+            color: #fff;
             display: grid;
-            grid-template-columns: repeat(3, 200px);
+            grid-template-columns: repeat(4, 160px);
         }
     }
 }
 
 section {
-    background-image: radial-gradient(#524e4e, #3796f0);
+    background-image: radial-gradient(#2e2929, #1678d5);
     height: 100vh;
     position: relative;
 
     & .list {
-        width: 70vw;
+        width: 89vw;
         height: 100%;
         margin: auto;
         position: relative;
@@ -54,34 +56,36 @@ section {
 
             & .car-img {
                 position: absolute;
-                top: 50%;
+                top: 55%;
+                margin-left: 10%;
                 transform: translateY(-50%);
-                width: 70%;
+                width: 85%;
 
                 & img {
-                    width: 100%;
-                    transform: rotate(-5deg);
+                    width: 80%;
+                    transform: rotate(-6deg);
                 }
             }
 
             & .content {
                 position: absolute;
-                right: 50px;
+                right: 20px;
                 width: 40%;
                 height: 110%;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: end;
-                gap: 55px;
+                gap: 50px;
 
                 &.car-information {
                     font-weight: bold;
                 }
 
                 & h2 {
+                    padding-right: -30%;
                     font-size: 4em;
-                    line-height: 1em;
+                    line-height: 2em;
                 }
 
                 & .description {
@@ -106,14 +110,14 @@ section {
             }
         }
 
-        &::before {
+        /*&::before {
             content: '';
             position: absolute;
             height: 200px;
             width: 100%;
             top: 48%;
             border-top: 1px solid #fff;
-        }
+        }*/
     }
 
     .arrows {
@@ -121,7 +125,7 @@ section {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -45px);
+        transform: translate(-55%, -20px);
         display: flex;
         justify-content: space-between;
 
@@ -133,8 +137,8 @@ section {
         }
 
         & button {
-            top: 60px;
-            width: 50;
+            
+            width: 40px;
             height: 50px;
             border-radius: 50%;
             cursor: pointer;
