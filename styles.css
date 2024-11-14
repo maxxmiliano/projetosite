@@ -40,7 +40,7 @@ header {
 }
 
 section {
-    background-image: radial-gradient(#2e2929, #1678d5);
+    background-image: radial-gradient(#2e2929, #19191a);
     height: 100vh;
     position: relative;
 
@@ -83,6 +83,7 @@ section {
                 }
 
                 & h2 {
+                    
                     padding-right: -30%;
                     font-size: 4em;
                     line-height: 2em;
@@ -92,9 +93,9 @@ section {
                     font-family: "Poppins", serif;
                     font-weight: 500;
                     font-style: normal;
-                    color: #000000;
+                    color: #fff;
                     font-size: 16px;
-                    text-align: right;
+                    text-align: center;
                     max-width: 500px;
                 }
 
@@ -103,8 +104,8 @@ section {
                     height: 35px;
                     width: 120px;
                     text-transform: uppercase;
-                    border: 2px solid #0378f4;
-                    background-color: rgb(228, 244, 5);
+                    border: 2px solid #f42b03;
+                    background-color: rgb(244, 220, 5);
                     cursor: pointer;
                 }
             }
@@ -137,10 +138,11 @@ section {
         }
 
         & button {
-            
+            top: 60%;
             width: 40px;
             height: 50px;
             border-radius: 50%;
+            border: none;
             cursor: pointer;
 
             & img {
@@ -154,7 +156,7 @@ section {
         }
     }
 
-    & .indicators {
+    .indicators {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -175,7 +177,7 @@ section {
             gap: 10px;
 
             & li {
-                width: 50px;
+                width: 40px;
                 height: 5px;
                 background-color: rgb(228, 244, 5);
                 border-radius: 5px;
@@ -191,3 +193,64 @@ section {
     }
 
 }
+
+section {
+
+    & .list{
+
+        & .item{
+            transform: translateX(100vw);
+            transition: 0.5s;
+            opacity: 0;
+
+            & .car-img{
+                
+                & img{
+                   transform: rotate(0);
+                   transition: 0.5s;
+                   transition-delay: 0.3s;
+                }
+            }
+
+            & .content{
+                & .car-information, h2, .description, .information {
+                    transform: translateX(200px);
+                    transition: 0.7s;
+                    transition-delay: 0.3s;
+                    opacity: 0;
+                }
+                & h2{
+                    transition-delay: 0.5s;
+                }
+                & .description{
+                    transition-delay: 0.7s;
+                }
+                & .information{
+                    transition-delay: 0.9s;
+                }
+            }
+        }
+
+        & .active{
+            transform: translateX(0);
+            transition: 0.5s;
+            opacity: 1;
+
+            & .car-img{
+                
+                & img{
+                   transform: rotate(-6deg);
+                }
+            }
+
+            & .content{
+                & .car-information, h2, .description, .information {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+        }
+    } 
+
+}
+
